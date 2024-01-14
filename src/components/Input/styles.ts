@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import theme  from "../../styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,10 +13,10 @@ export const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: 54,
-    backgroundColor: '#262626',
+    backgroundColor: theme.colors.GRAY_500,
     borderRadius: 6,
     padding: 16,
-    color: '#F2F2F2',
+    color: theme.colors.GRAY_100,
     fontSize: 16,
     fontFamily: 'Inter_400Regular',
     width: '100%',
@@ -23,23 +24,23 @@ export const styles = StyleSheet.create({
   inputFocused: {
    borderStyle: 'solid',
    borderWidth: 1,
-   borderTopColor: '#5E60CE',
-   borderBottomColor: '#5E60CE',
-   borderLeftColor: '#5E60CE',
-   borderRightColor: '#5E60CE',
+   borderTopColor: theme.colors.PURPLE_LIGHT,
+   borderBottomColor: theme.colors.PURPLE_LIGHT,
+   borderLeftColor: theme.colors.PURPLE_LIGHT,
+   borderRightColor: theme.colors.PURPLE_LIGHT,
    width: '100%',
   },
   button: {
     width: 52,
     height: 52,
-    backgroundColor: '#1E6F9F',
+    backgroundColor: theme.colors.BLUE_DARK,
     borderRadius: 6,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 18,
   },
   buttonPressed: {
-    backgroundColor: '#4EA8DE',
+    backgroundColor: theme.colors.PURPLE_LIGHT,
     width: 52,
     height: 52,
     borderRadius: 6,

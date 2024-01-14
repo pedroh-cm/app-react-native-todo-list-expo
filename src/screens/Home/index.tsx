@@ -8,7 +8,6 @@ import { Tasks } from "../../components/Tasks";
 import { styles } from "./styles";
 
 export function Home() {
-  const [tasksCreated, setTasksCreated] = useState(0);
   const [tasksConcluded, setTasksConcluded] = useState(0);
   const [inputValue, setInputValue] = useState('');
   const [tasks, setTasks] = useState<string[]>([]);
@@ -29,7 +28,6 @@ export function Home() {
     }
 
     setTasks(prevState => [...prevState, inputValue]);
-    setTasksCreated(tasksCreated + 1);
     setInputValue('');
   }
 
@@ -54,7 +52,6 @@ export function Home() {
           text: 'Deletar',
           onPress: () => {
             setTasks(prevState => prevState.filter(task => task !== taskToDelete))
-            setTasksCreated(tasksCreated - 1)
           },
           style: 'destructive'
         }
@@ -75,7 +72,6 @@ export function Home() {
         /> 
       </View>
       <Tasks 
-        tasksCreated={tasksCreated} 
         tasksConcluded={tasksConcluded}
         tasks={tasks}
         handleConcludedTask={handleConcludedTask}

@@ -1,10 +1,10 @@
+import React from 'react';
 import { StatusBar } from 'react-native';
 import {
   useFonts,
   Inter_700Bold,
   Inter_400Regular,
 } from "@expo-google-fonts/inter"
-
 import { Home } from './src/screens/Home';
 import { Loading } from './src/components/Loading';
 

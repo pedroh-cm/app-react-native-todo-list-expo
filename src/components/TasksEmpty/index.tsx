@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Image, Text, View } from "react-native";
 
 import { styles } from "./styles";
 
-export function TasksEmpty() {
+function TasksEmpty() {
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>
@@ -15,3 +16,5 @@ export function TasksEmpty() {
     </View>
   )
 }
+
+export const TasksEmptyMemo = memo(TasksEmpty)
